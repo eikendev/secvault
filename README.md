@@ -23,4 +23,4 @@ This API allows the user to
 
 The number of vaults is limited to four, which could be increased easily.
 When a vault is created, a new character devices is made accessible as `/dev/sv_data[0-3]`.
-This device can be used like any normal character device via `open()`, `release()`, `seek()`, `read()` and `write()`.
+This device can be used like any normal character device via `open()`, `release()`, `seek()`, `read()`, and `write()`.
