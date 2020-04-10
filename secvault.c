@@ -343,7 +343,7 @@ static struct file_operations vault_fops = {
 	.release = vault_release, ///< The close handler.
 	.llseek = vault_llseek, ///< The seek handler.
 	.read = vault_read, ///< The read handler.
-	.write = vault_write ///< The write handler.
+	.write = vault_write, ///< The write handler.
 };
 
 /**
