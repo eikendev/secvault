@@ -195,7 +195,7 @@ static loff_t vault_llseek(struct file *file, loff_t offset, int whence)
  * @param buffer The buffer to apply this operation on.
  * @param len The length of the buffer.
  * @param offset The offset of the encryption cursor in the buffer.
- * @param  key The key to encrypt the buffer with.
+ * @param key The key to encrypt the buffer with.
  */
 static void xor_buffer(char *buffer, size_t len, loff_t offset, char key[KEYSIZE])
 {
