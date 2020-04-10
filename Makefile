@@ -3,7 +3,7 @@ DEFS = -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_SVID_SOURCE -D_POSIX_C_SOURCE=200809L
 
 MODULE_NAME = secvault
 
-KDIR := /lib/modules/`uname -r`/build
+KDIR := /lib/modules/$(shell uname -r)/build
 MAKE = make
 
 obj-m := $(MODULE_NAME).o
@@ -11,7 +11,7 @@ obj-m := $(MODULE_NAME).o
 all: module svctl
 
 module:
-	$(MAKE) -C $(KDIR) M=$(PWD) ARCH=um V=1 modules
+	$(MAKE) -C $(KDIR) M=$(PWD) V=1 modules
 
 %.o: %.c
 	$(CC) -std=c99 -Wall -pedantic -g $(DEFS) -o $@ -c $^
@@ -20,7 +20,7 @@ svctl: svctl.o
 	$(CC) -std=c99 -Wall -pedantic -g $(DEFS) -o $@ $^
 
 clean:
-	$(MAKE) -C $(KDIR) M=$(PWD) ARCH=um V=1 clean
+	$(MAKE) -C $(KDIR) M=$(PWD) V=1 clean
 	rm -f svctl
 
 install:
