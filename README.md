@@ -1,4 +1,4 @@
-# About
+## About
 
 This repository contains my first Linux kernel module.
 It was created as a project in the lecture "Operating Systems" at [TU Wien](https://www.tuwien.at/).
@@ -7,7 +7,7 @@ The idea is that users can have secure storage.
 The storage is managed by the kernel, and encrypted using a very basic encryption scheme.
 Note that the implemented scheme is not meant to be secure, and serves simple demonstration purposes.
 
-# Usage
+## Usage
 
 The project consists of two parts, the kernel module and a user program.
 When the kernel module is loaded, it creates a device with which the vaults can be managed.
